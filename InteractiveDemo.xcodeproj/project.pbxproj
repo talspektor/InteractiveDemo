@@ -32,6 +32,7 @@
 		438F459026878AC300371E35 /* TeamDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F458F26878AC300371E35 /* TeamDetailViewModel.swift */; };
 		438F459426878C1900371E35 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F459326878C1900371E35 /* Coordinator.swift */; };
 		438F459626878D4F00371E35 /* TeamViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 438F459526878D4F00371E35 /* TeamViewController.storyboard */; };
+		438F459826878DED00371E35 /* MainCordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F459726878DED00371E35 /* MainCordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		438F458F26878AC300371E35 /* TeamDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailViewModel.swift; sourceTree = "<group>"; };
 		438F459326878C1900371E35 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		438F459526878D4F00371E35 /* TeamViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TeamViewController.storyboard; sourceTree = "<group>"; };
+		438F459726878DED00371E35 /* MainCordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				438F459326878C1900371E35 /* Coordinator.swift */,
+				438F459726878DED00371E35 /* MainCordinator.swift */,
 			);
 			name = Coordinator;
 			sourceTree = "<group>";
@@ -407,6 +410,7 @@
 				4333F12D2685162F007DD015 /* AppDelegate.swift in Sources */,
 				438F459026878AC300371E35 /* TeamDetailViewModel.swift in Sources */,
 				438F45802687539B00371E35 /* NetworkDataProvider.swift in Sources */,
+				438F459826878DED00371E35 /* MainCordinator.swift in Sources */,
 				4333F16D26860D99007DD015 /* TeamsViewModel.swift in Sources */,
 				438F45742687425700371E35 /* UpcomingMatchesCell.swift in Sources */,
 				4333F1702686126C007DD015 /* DataProvider.swift in Sources */,

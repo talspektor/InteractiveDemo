@@ -8,8 +8,9 @@
 import UIKit
 import SwiftSVG
 
-class TeamsViewController: UIViewController {
+class TeamsViewController: UIViewController, Storyboarded {
 
+    weak var coordinator: MainCoordinator?
     @IBOutlet weak var tableView: UITableView!
 
     private var viewModel = TeamsViewModel()
