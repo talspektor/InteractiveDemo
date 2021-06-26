@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TeamDetailView" customModule="InteractiveDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="508" height="500"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lu8-yB-hAc" userLabel="teamLogoView">
+                    <rect key="frame" x="204" y="56" width="100" height="100"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="2JD-Yd-WuI"/>
+                        <constraint firstAttribute="height" constant="100" id="XxG-64-uoy"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JiT-tX-S9a">
+                    <rect key="frame" x="0.0" y="201" width="508" height="299"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upcoming Matches" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNz-nJ-fkd">
+                    <rect key="frame" x="153" y="164" width="202" height="29"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="sNz-nJ-fkd" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="6aR-p3-0Dc"/>
+                <constraint firstAttribute="bottom" secondItem="JiT-tX-S9a" secondAttribute="bottom" id="6he-t4-BO4"/>
+                <constraint firstItem="Lu8-yB-hAc" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Lpr-A0-9iU"/>
+                <constraint firstItem="JiT-tX-S9a" firstAttribute="top" secondItem="sNz-nJ-fkd" secondAttribute="bottom" constant="8" symbolic="YES" id="XJH-ZR-tXP"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="JiT-tX-S9a" secondAttribute="trailing" id="ahK-cI-QEj"/>
+                <constraint firstItem="JiT-tX-S9a" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="hPC-mm-Tdb"/>
+                <constraint firstItem="sNz-nJ-fkd" firstAttribute="top" secondItem="Lu8-yB-hAc" secondAttribute="bottom" constant="8" symbolic="YES" id="kBj-bJ-ouh"/>
+                <constraint firstItem="Lu8-yB-hAc" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="12" id="nwg-Op-qDV"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="tableView" destination="JiT-tX-S9a" id="45V-VY-720"/>
+                <outlet property="teamLogoView" destination="Lu8-yB-hAc" id="662-XZ-kba"/>
+                <outlet property="upcomingMatchesLabel" destination="sNz-nJ-fkd" id="34Q-Lv-WID"/>
+            </connections>
+            <point key="canvasLocation" x="200.00000000000003" y="247.09821428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
