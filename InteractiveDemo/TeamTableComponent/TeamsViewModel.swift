@@ -12,11 +12,12 @@ class TeamsViewModel {
 
     var updateTable: (() -> Void)?
 
-    var dataSource = DataSource()
-//    var delegate = TeamTableViewDelegate()
-    var dataProvider = NetworkDataProvider()
+    var dataSource: DataSource
+    private var dataProvider: DataProvider
 
-    init() {
+    init(dataProvider: DataProvider, dataSource: DataSource) {
+        self.dataProvider = dataProvider
+        self.dataSource = dataSource
         dataSource.updateTable = { [weak self] in
             self?.updateTable?()
         }

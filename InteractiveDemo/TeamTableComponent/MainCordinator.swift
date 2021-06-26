@@ -10,6 +10,7 @@ import UIKit
 class MainCoordinator: Coordinator {
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
+    private let dataProvider = NetworkDataProvider()
 
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -18,6 +19,16 @@ class MainCoordinator: Coordinator {
     func start() {
         let viewController = TeamsViewController.instantiate()
         viewController.coordinator = self
+        let dataSource = DataSource()
+        let viewModel = TeamsViewModel(dataProvider: dataProvider, dataSource: dataSource)
+        viewController.configure(with: viewModel)
         navigationController.pushViewController(viewController, animated: false)
+    }
+
+    func showDetails(id: Int, url: URL) {
+        let viewController = TeamDetailViewController.instantiate()
+        let viewModel = TeamDetailViewModel(dataProvider: dataProvider, url: url, teamId: id)
+        viewController.condfigure(with: viewModel)
+        navigationController.pushViewController(viewController, animated: true)
     }
 }

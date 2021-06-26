@@ -8,10 +8,19 @@
 import Foundation
 
 class TeamDetailViewModel {
-    let dataProvider = NetworkDataProvider()
 
-    func getMatches(id: Int, completion: @escaping ([Match]) -> Void) {
-        dataProvider.getMatches(id: id) { result in
+    var url: URL
+    private var dataProvider: DataProvider
+    private var teamId: Int
+
+    init(dataProvider: DataProvider, url: URL, teamId: Int) {
+        self.dataProvider = dataProvider
+        self.url = url
+        self.teamId = teamId
+    }
+
+    func getMatches(completion: @escaping ([Match]) -> Void) {
+        dataProvider.getMatches(id: teamId) { result in
             switch result {
             case .success(let matches):
                 completion(matches.matches)
@@ -20,5 +29,4 @@ class TeamDetailViewModel {
             }
         }
     }
-
 }

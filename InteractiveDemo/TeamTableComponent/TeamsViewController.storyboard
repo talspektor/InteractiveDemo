@@ -11,7 +11,7 @@
         <!--Teams-->
         <scene sceneID="QGu-GC-Zrm">
             <objects>
-                <viewController title="Teams" id="Fiu-XM-Z8O" customClass="TeamsViewController" customModule="InteractiveDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TeamsViewController" title="Teams" id="Fiu-XM-Z8O" customClass="TeamsViewController" customModule="InteractiveDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jrD-Nx-Ix2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

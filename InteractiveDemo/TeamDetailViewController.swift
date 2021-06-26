@@ -7,25 +7,19 @@
 
 import UIKit
 
-class TeamDetailViewController: UIViewController {
+class TeamDetailViewController: UIViewController, Storyboarded {
 
-    private var url: URL?
-    private var teamId: Int?
     private var teamDetailView: TeamDetailView?
-    private var viewMode = TeamDetailViewModel()
+    private var viewModel: TeamDetailViewModel!
 
-    func condfigure(with teamId: Int, and url: URL) {
-        self.teamId = teamId
-        self.url = url
+    func condfigure(with viewModel: TeamDetailViewModel) {
+        self.viewModel = viewModel
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         loadViewFromNib()
-        guard let id = teamId else { return }
-        viewMode.getMatches(id: id) { [weak self] matches in
-            self?.teamDetailView?.matches = matches
-        }
+        getMatches()
         setLogo()
     }
 
@@ -35,8 +29,14 @@ class TeamDetailViewController: UIViewController {
         view = teamDetailView
     }
 
+    private func getMatches() {
+        viewModel.getMatches() { [weak self] matches in
+            self?.teamDetailView?.matches = matches
+        }
+    }
+
     private func setLogo() {
-        guard let url = url else { return }
+        let url = viewModel.url
         DispatchQueue.global().async { [weak self] in
             let view = UIView(SVGURL: url) { [weak self] layer in
                 layer.resizeToFit((self?.teamDetailView?.teamLogoView?.bounds)!)

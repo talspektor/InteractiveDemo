@@ -17,11 +17,12 @@ class TeamDetailView: UIView {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        setupTableView()
+    }
 
+    private func setupTableView() {
         tableView.dataSource = self
         tableView.register(UpcomingMatchesCell.nib, forCellReuseIdentifier: UpcomingMatchesCell.reusableIdentifier)
-
-        tableView.reloadData()
     }
 }
 

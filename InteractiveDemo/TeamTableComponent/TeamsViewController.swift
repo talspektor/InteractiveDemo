@@ -13,7 +13,11 @@ class TeamsViewController: UIViewController, Storyboarded {
     weak var coordinator: MainCoordinator?
     @IBOutlet weak var tableView: UITableView!
 
-    private var viewModel = TeamsViewModel()
+    private var viewModel: TeamsViewModel!
+
+    func configure(with viewModel: TeamsViewModel) {
+        self.viewModel = viewModel
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +27,6 @@ class TeamsViewController: UIViewController, Storyboarded {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         getTeams()
         updateTableView()
     }
@@ -43,11 +46,7 @@ class TeamsViewController: UIViewController, Storyboarded {
 
 extension TeamsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let storyboard = UIStoryboard(name: String(describing: TeamDetailViewController.self), bundle: nil)
-        guard let teamViewController = storyboard.instantiateViewController(identifier: String(describing: String(describing: TeamDetailViewController.self))) as? TeamDetailViewController else { return }
-        
-        let logo = URL(string: viewModel.dataSource.teams[indexPath.row].crestUrl)!
-        teamViewController.condfigure(with: viewModel.dataSource.teams[indexPath.row].id, and: logo)
-        navigationController?.pushViewController(teamViewController, animated: true)
+        guard let url = URL(string: viewModel.dataSource.teams[indexPath.row].crestUrl) else { return }
+        coordinator?.showDetails(id: viewModel.dataSource.teams[indexPath.row].id, url: url)
     }
 }
