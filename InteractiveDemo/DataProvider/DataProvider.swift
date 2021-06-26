@@ -7,7 +7,13 @@
 
 import Foundation
 
+enum ResponseError: String, Error {
+    case noData
+    case decodingError
+    case error
+    case responseStatusError
+}
+
 protocol DataProvider {
     func getTeams(completion: @escaping (Result<[Team], ResponseError>) -> Void)
-    func getTeamImage(url: URL, completion: @escaping (Result<Data, ResponseError>) -> Void)
 }

@@ -11,7 +11,7 @@ struct Teams: Decodable {
     let teams: [Team]
 }
 
-struct Team: Decodable, Hashable {
+struct Team: Decodable {
     let shortName: String
     let crestUrl: String
     var imageData: Data?

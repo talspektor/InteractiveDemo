@@ -33,10 +33,4 @@ class TeamsViewModel {
             }
         }
     }
-
-    func getTeamImage(url: URL, completion: @escaping (Result<Data, ResponseError>) -> Void ) {
-        dataProvider.getTeamImage(url: url) { result in
-            completion(result)
-        }
-    }
 }

@@ -21,12 +21,12 @@
 		4333F16726860A16007DD015 /* TeamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4333F16626860A16007DD015 /* TeamCell.swift */; };
 		4333F16D26860D99007DD015 /* TeamsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4333F16C26860D99007DD015 /* TeamsViewModel.swift */; };
 		4333F1702686126C007DD015 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4333F16F2686126C007DD015 /* DataProvider.swift */; };
-		4333F172268612EC007DD015 /* NetworkDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4333F171268612EC007DD015 /* NetworkDataProvider.swift */; };
 		4333F1752687177A007DD015 /* SwiftSVG in Frameworks */ = {isa = PBXBuildFile; productRef = 4333F1742687177A007DD015 /* SwiftSVG */; };
 		438F45722687414700371E35 /* TeamDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 438F45712687414700371E35 /* TeamDetailView.xib */; };
 		438F45742687425700371E35 /* UpcomingMatchesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F45732687425700371E35 /* UpcomingMatchesCell.swift */; };
 		438F45762687433600371E35 /* UpcomingMatchesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 438F45752687433600371E35 /* UpcomingMatchesCell.xib */; };
 		438F4578268745AE00371E35 /* UpcomingMatchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F4577268745AE00371E35 /* UpcomingMatchModel.swift */; };
+		438F45802687539B00371E35 /* NetworkDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F457F2687539B00371E35 /* NetworkDataProvider.swift */; };
 		43AB06AB26873AA70043406B /* TeamTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AB06AA26873AA70043406B /* TeamTableViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
@@ -68,11 +68,11 @@
 		4333F16626860A16007DD015 /* TeamCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCell.swift; sourceTree = "<group>"; };
 		4333F16C26860D99007DD015 /* TeamsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewModel.swift; sourceTree = "<group>"; };
 		4333F16F2686126C007DD015 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
-		4333F171268612EC007DD015 /* NetworkDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataProvider.swift; sourceTree = "<group>"; };
 		438F45712687414700371E35 /* TeamDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamDetailView.xib; sourceTree = "<group>"; };
 		438F45732687425700371E35 /* UpcomingMatchesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingMatchesCell.swift; sourceTree = "<group>"; };
 		438F45752687433600371E35 /* UpcomingMatchesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpcomingMatchesCell.xib; sourceTree = "<group>"; };
 		438F4577268745AE00371E35 /* UpcomingMatchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingMatchModel.swift; sourceTree = "<group>"; };
+		438F457F2687539B00371E35 /* NetworkDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataProvider.swift; sourceTree = "<group>"; };
 		43AB06AA26873AA70043406B /* TeamTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableViewDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -209,7 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				4333F16F2686126C007DD015 /* DataProvider.swift */,
-				4333F171268612EC007DD015 /* NetworkDataProvider.swift */,
+				438F457F2687539B00371E35 /* NetworkDataProvider.swift */,
 			);
 			path = DataProvider;
 			sourceTree = "<group>";
@@ -365,6 +365,7 @@
 				4333F1312685162F007DD015 /* TeamsViewController.swift in Sources */,
 				4333F16726860A16007DD015 /* TeamCell.swift in Sources */,
 				4333F12D2685162F007DD015 /* AppDelegate.swift in Sources */,
+				438F45802687539B00371E35 /* NetworkDataProvider.swift in Sources */,
 				4333F16D26860D99007DD015 /* TeamsViewModel.swift in Sources */,
 				43AB06AB26873AA70043406B /* TeamTableViewDelegate.swift in Sources */,
 				438F45742687425700371E35 /* UpcomingMatchesCell.swift in Sources */,
@@ -372,7 +373,6 @@
 				4333F12F2685162F007DD015 /* SceneDelegate.swift in Sources */,
 				4333F15D26851E6F007DD015 /* Model.swift in Sources */,
 				438F4578268745AE00371E35 /* UpcomingMatchModel.swift in Sources */,
-				4333F172268612EC007DD015 /* NetworkDataProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
