@@ -12,6 +12,7 @@ struct Teams: Decodable {
 }
 
 struct Team: Decodable {
+    let id: Int
     let shortName: String
     let crestUrl: String
     var imageData: Data?

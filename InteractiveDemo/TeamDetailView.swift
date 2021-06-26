@@ -13,13 +13,15 @@ class TeamDetailView: UIView {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var upcomingMatchesLabel: UILabel!
 
-    var matches = [UpcomingMatchModel]()
+    var matches: [Match] = Matches.emptyState
 
     override func awakeFromNib() {
         super.awakeFromNib()
 
         tableView.dataSource = self
         tableView.register(UpcomingMatchesCell.nib, forCellReuseIdentifier: UpcomingMatchesCell.reusableIdentifier)
+
+        tableView.reloadData()
     }
 }
 

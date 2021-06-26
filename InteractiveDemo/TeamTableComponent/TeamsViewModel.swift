@@ -13,7 +13,7 @@ class TeamsViewModel {
     var updateTable: (() -> Void)?
 
     var dataSource = DataSource()
-    var delegate = TeamTableViewDelegate()
+//    var delegate = TeamTableViewDelegate()
     var dataProvider = NetworkDataProvider()
 
     init() {
@@ -27,7 +27,7 @@ class TeamsViewModel {
             guard let self = self else { return }
             switch result {
             case .success(let teams):
-                self.dataSource.teams = teams
+                self.dataSource.teams = teams.teams
             case .failure(let eror):
                 print(eror)
             }

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Teams-->
+        <scene sceneID="QGu-GC-Zrm">
+            <objects>
+                <viewController title="Teams" id="Fiu-XM-Z8O" customClass="TeamsViewController" customModule="InteractiveDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jrD-Nx-Ix2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cJB-Me-HPm">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="TeamCell" id="gvf-fd-gyt" customClass="TeamCell" customModule="InteractiveDemo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="68.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gvf-fd-gyt" id="8HG-mE-5hL">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="68.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GNh-Vg-CK7">
+                                                    <rect key="frame" x="24" y="24" width="41.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lI6-oC-sOa">
+                                                    <rect key="frame" x="356" y="10" width="48" height="48.5"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="48" id="mi4-Fd-aco"/>
+                                                        <constraint firstAttribute="width" constant="48" id="whm-r9-d9A"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="lI6-oC-sOa" secondAttribute="bottom" constant="10" id="FRH-qG-bhL"/>
+                                                <constraint firstItem="GNh-Vg-CK7" firstAttribute="centerY" secondItem="8HG-mE-5hL" secondAttribute="centerY" id="L8T-fH-avh"/>
+                                                <constraint firstItem="GNh-Vg-CK7" firstAttribute="leading" secondItem="8HG-mE-5hL" secondAttribute="leading" constant="24" id="VX5-aL-SME"/>
+                                                <constraint firstItem="lI6-oC-sOa" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="GNh-Vg-CK7" secondAttribute="trailing" constant="24" id="n0z-lG-VhX"/>
+                                                <constraint firstAttribute="trailing" secondItem="lI6-oC-sOa" secondAttribute="trailing" constant="10" id="nF2-h1-XR9"/>
+                                                <constraint firstItem="lI6-oC-sOa" firstAttribute="top" secondItem="8HG-mE-5hL" secondAttribute="top" constant="10" id="y3P-Hg-EF5"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="teamNameLabel" destination="GNh-Vg-CK7" id="PDm-XO-n4C"/>
+                                            <outlet property="teamThumbnailView" destination="lI6-oC-sOa" id="GRU-Tw-jbg"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ixm-0y-MoK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cJB-Me-HPm" firstAttribute="trailing" secondItem="Ixm-0y-MoK" secondAttribute="trailing" id="25t-RM-GOC"/>
+                            <constraint firstItem="cJB-Me-HPm" firstAttribute="top" secondItem="jrD-Nx-Ix2" secondAttribute="top" id="Q3g-CE-U6F"/>
+                            <constraint firstAttribute="bottom" secondItem="cJB-Me-HPm" secondAttribute="bottom" id="QXm-JN-21P"/>
+                            <constraint firstItem="cJB-Me-HPm" firstAttribute="leading" secondItem="Ixm-0y-MoK" secondAttribute="leading" id="cNP-c7-1cO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="gtu-g1-Nin"/>
+                    <connections>
+                        <outlet property="tableView" destination="cJB-Me-HPm" id="8g4-zD-XhI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kv9-p1-Xlz" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="123" y="33"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

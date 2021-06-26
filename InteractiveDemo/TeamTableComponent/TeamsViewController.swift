@@ -17,7 +17,7 @@ class TeamsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = viewModel.dataSource
-        tableView.delegate = viewModel.delegate
+        tableView.delegate = self
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -40,3 +40,13 @@ class TeamsViewController: UIViewController {
     }
 }
 
+extension TeamsViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: String(describing: TeamDetailViewController.self), bundle: nil)
+        guard let teamViewController = storyboard.instantiateViewController(identifier: String(describing: String(describing: TeamDetailViewController.self))) as? TeamDetailViewController else { return }
+        
+        let logo = URL(string: viewModel.dataSource.teams[indexPath.row].crestUrl)!
+        teamViewController.condfigure(with: viewModel.dataSource.teams[indexPath.row].id, and: logo)
+        navigationController?.pushViewController(teamViewController, animated: true)
+    }
+}

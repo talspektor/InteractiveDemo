@@ -15,5 +15,5 @@ enum ResponseError: String, Error {
 }
 
 protocol DataProvider {
-    func getTeams(completion: @escaping (Result<[Team], ResponseError>) -> Void)
+    func getTeams(completion: @escaping (Result<Teams, ResponseError>) -> Void)
 }

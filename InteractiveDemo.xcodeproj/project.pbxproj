@@ -15,7 +15,7 @@
 		4333F13926851630007DD015 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4333F13726851630007DD015 /* LaunchScreen.storyboard */; };
 		4333F14426851631007DD015 /* InteractiveDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4333F14326851631007DD015 /* InteractiveDemoTests.swift */; };
 		4333F14F26851631007DD015 /* InteractiveDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4333F14E26851631007DD015 /* InteractiveDemoUITests.swift */; };
-		4333F15D26851E6F007DD015 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4333F15C26851E6F007DD015 /* Model.swift */; };
+		4333F15D26851E6F007DD015 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4333F15C26851E6F007DD015 /* Team.swift */; };
 		4333F15F268608B1007DD015 /* TeamDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4333F15E268608B1007DD015 /* TeamDetailView.swift */; };
 		4333F1652686097E007DD015 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4333F1642686097E007DD015 /* DataSource.swift */; };
 		4333F16726860A16007DD015 /* TeamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4333F16626860A16007DD015 /* TeamCell.swift */; };
@@ -25,9 +25,13 @@
 		438F45722687414700371E35 /* TeamDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 438F45712687414700371E35 /* TeamDetailView.xib */; };
 		438F45742687425700371E35 /* UpcomingMatchesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F45732687425700371E35 /* UpcomingMatchesCell.swift */; };
 		438F45762687433600371E35 /* UpcomingMatchesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 438F45752687433600371E35 /* UpcomingMatchesCell.xib */; };
-		438F4578268745AE00371E35 /* UpcomingMatchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F4577268745AE00371E35 /* UpcomingMatchModel.swift */; };
 		438F45802687539B00371E35 /* NetworkDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F457F2687539B00371E35 /* NetworkDataProvider.swift */; };
-		43AB06AB26873AA70043406B /* TeamTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AB06AA26873AA70043406B /* TeamTableViewDelegate.swift */; };
+		438F4586268770F400371E35 /* TeamDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F4584268770F400371E35 /* TeamDetailViewController.swift */; };
+		438F458A268772D700371E35 /* TeamDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 438F4589268772D700371E35 /* TeamDetailViewController.storyboard */; };
+		438F458D26877A6F00371E35 /* Matches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F458C26877A6F00371E35 /* Matches.swift */; };
+		438F459026878AC300371E35 /* TeamDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F458F26878AC300371E35 /* TeamDetailViewModel.swift */; };
+		438F459426878C1900371E35 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F459326878C1900371E35 /* Coordinator.swift */; };
+		438F459626878D4F00371E35 /* TeamViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 438F459526878D4F00371E35 /* TeamViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +66,7 @@
 		4333F14A26851631007DD015 /* InteractiveDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InteractiveDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4333F14E26851631007DD015 /* InteractiveDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveDemoUITests.swift; sourceTree = "<group>"; };
 		4333F15026851631007DD015 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4333F15C26851E6F007DD015 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		4333F15C26851E6F007DD015 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		4333F15E268608B1007DD015 /* TeamDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailView.swift; sourceTree = "<group>"; };
 		4333F1642686097E007DD015 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		4333F16626860A16007DD015 /* TeamCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCell.swift; sourceTree = "<group>"; };
@@ -71,9 +75,13 @@
 		438F45712687414700371E35 /* TeamDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamDetailView.xib; sourceTree = "<group>"; };
 		438F45732687425700371E35 /* UpcomingMatchesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingMatchesCell.swift; sourceTree = "<group>"; };
 		438F45752687433600371E35 /* UpcomingMatchesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpcomingMatchesCell.xib; sourceTree = "<group>"; };
-		438F4577268745AE00371E35 /* UpcomingMatchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingMatchModel.swift; sourceTree = "<group>"; };
 		438F457F2687539B00371E35 /* NetworkDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataProvider.swift; sourceTree = "<group>"; };
-		43AB06AA26873AA70043406B /* TeamTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableViewDelegate.swift; sourceTree = "<group>"; };
+		438F4584268770F400371E35 /* TeamDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailViewController.swift; sourceTree = "<group>"; };
+		438F4589268772D700371E35 /* TeamDetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TeamDetailViewController.storyboard; sourceTree = "<group>"; };
+		438F458C26877A6F00371E35 /* Matches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matches.swift; sourceTree = "<group>"; };
+		438F458F26878AC300371E35 /* TeamDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailViewModel.swift; sourceTree = "<group>"; };
+		438F459326878C1900371E35 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		438F459526878D4F00371E35 /* TeamViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TeamViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +133,7 @@
 		4333F12B2685162F007DD015 /* InteractiveDemo */ = {
 			isa = PBXGroup;
 			children = (
+				438F459226878BE400371E35 /* Coordinator */,
 				4333F16E2686124C007DD015 /* DataProvider */,
 				4333F16B26860BA0007DD015 /* Assets */,
 				4333F16326860924007DD015 /* SupportingFiles */,
@@ -158,11 +167,10 @@
 		4333F160268608DF007DD015 /* DetailComponent */ = {
 			isa = PBXGroup;
 			children = (
-				438F4579268745D600371E35 /* Model */,
-				4333F15E268608B1007DD015 /* TeamDetailView.swift */,
-				438F45712687414700371E35 /* TeamDetailView.xib */,
-				438F45732687425700371E35 /* UpcomingMatchesCell.swift */,
-				438F45752687433600371E35 /* UpcomingMatchesCell.xib */,
+				438F458E2687889900371E35 /* UpcominMatchesCell */,
+				438F458B2687768C00371E35 /* TeamDetaiView */,
+				438F4588268770FB00371E35 /* TeamDetailViewController */,
+				438F458F26878AC300371E35 /* TeamDetailViewModel.swift */,
 			);
 			name = DetailComponent;
 			sourceTree = "<group>";
@@ -173,9 +181,9 @@
 				4333F1302685162F007DD015 /* TeamsViewController.swift */,
 				4333F16C26860D99007DD015 /* TeamsViewModel.swift */,
 				4333F1642686097E007DD015 /* DataSource.swift */,
-				43AB06AA26873AA70043406B /* TeamTableViewDelegate.swift */,
 				4333F16626860A16007DD015 /* TeamCell.swift */,
 				4333F1322685162F007DD015 /* Main.storyboard */,
+				438F459526878D4F00371E35 /* TeamViewController.storyboard */,
 			);
 			path = TeamTableComponent;
 			sourceTree = "<group>";
@@ -183,7 +191,8 @@
 		4333F16226860916007DD015 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				4333F15C26851E6F007DD015 /* Model.swift */,
+				4333F15C26851E6F007DD015 /* Team.swift */,
+				438F458C26877A6F00371E35 /* Matches.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -214,12 +223,39 @@
 			path = DataProvider;
 			sourceTree = "<group>";
 		};
-		438F4579268745D600371E35 /* Model */ = {
+		438F4588268770FB00371E35 /* TeamDetailViewController */ = {
 			isa = PBXGroup;
 			children = (
-				438F4577268745AE00371E35 /* UpcomingMatchModel.swift */,
+				438F4584268770F400371E35 /* TeamDetailViewController.swift */,
+				438F4589268772D700371E35 /* TeamDetailViewController.storyboard */,
 			);
-			path = Model;
+			name = TeamDetailViewController;
+			sourceTree = "<group>";
+		};
+		438F458B2687768C00371E35 /* TeamDetaiView */ = {
+			isa = PBXGroup;
+			children = (
+				4333F15E268608B1007DD015 /* TeamDetailView.swift */,
+				438F45712687414700371E35 /* TeamDetailView.xib */,
+			);
+			name = TeamDetaiView;
+			sourceTree = "<group>";
+		};
+		438F458E2687889900371E35 /* UpcominMatchesCell */ = {
+			isa = PBXGroup;
+			children = (
+				438F45732687425700371E35 /* UpcomingMatchesCell.swift */,
+				438F45752687433600371E35 /* UpcomingMatchesCell.xib */,
+			);
+			path = UpcominMatchesCell;
+			sourceTree = "<group>";
+		};
+		438F459226878BE400371E35 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				438F459326878C1900371E35 /* Coordinator.swift */,
+			);
+			name = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,9 +369,11 @@
 			files = (
 				438F45762687433600371E35 /* UpcomingMatchesCell.xib in Resources */,
 				438F45722687414700371E35 /* TeamDetailView.xib in Resources */,
+				438F459626878D4F00371E35 /* TeamViewController.storyboard in Resources */,
 				4333F13926851630007DD015 /* LaunchScreen.storyboard in Resources */,
 				4333F13626851630007DD015 /* Assets.xcassets in Resources */,
 				4333F1342685162F007DD015 /* Main.storyboard in Resources */,
+				438F458A268772D700371E35 /* TeamDetailViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,17 +400,19 @@
 			files = (
 				4333F1652686097E007DD015 /* DataSource.swift in Sources */,
 				4333F15F268608B1007DD015 /* TeamDetailView.swift in Sources */,
+				438F459426878C1900371E35 /* Coordinator.swift in Sources */,
 				4333F1312685162F007DD015 /* TeamsViewController.swift in Sources */,
 				4333F16726860A16007DD015 /* TeamCell.swift in Sources */,
+				438F4586268770F400371E35 /* TeamDetailViewController.swift in Sources */,
 				4333F12D2685162F007DD015 /* AppDelegate.swift in Sources */,
+				438F459026878AC300371E35 /* TeamDetailViewModel.swift in Sources */,
 				438F45802687539B00371E35 /* NetworkDataProvider.swift in Sources */,
 				4333F16D26860D99007DD015 /* TeamsViewModel.swift in Sources */,
-				43AB06AB26873AA70043406B /* TeamTableViewDelegate.swift in Sources */,
 				438F45742687425700371E35 /* UpcomingMatchesCell.swift in Sources */,
 				4333F1702686126C007DD015 /* DataProvider.swift in Sources */,
 				4333F12F2685162F007DD015 /* SceneDelegate.swift in Sources */,
-				4333F15D26851E6F007DD015 /* Model.swift in Sources */,
-				438F4578268745AE00371E35 /* UpcomingMatchModel.swift in Sources */,
+				4333F15D26851E6F007DD015 /* Team.swift in Sources */,
+				438F458D26877A6F00371E35 /* Matches.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

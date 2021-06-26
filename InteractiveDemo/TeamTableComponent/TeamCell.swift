@@ -19,10 +19,14 @@ class TeamCell: UITableViewCell {
     }
 
     func setImage(with url: URL) {
-        let view = UIView(SVGURL: url) { layer in
-            layer.resizeToFit(self.teamThumbnailView.bounds)
+        DispatchQueue.global().async {
+            let view = UIView(SVGURL: url) { [weak self] layer in
+                layer.resizeToFit((self?.teamThumbnailView.bounds)!)
+            }
+            DispatchQueue.main.async { [weak self] in
+                self?.teamThumbnailView.addSubview(view)
+            }
         }
-        teamThumbnailView.addSubview(view)
     }
 
     override func prepareForReuse() {
