@@ -15,46 +15,23 @@ struct NetworkDataProvider: DataProvider {
 
     var requeredHeader = ["X-Auth-Token": "df1100b013fa4295aa4a28a38fd24872"]
 
-    func getTeams(completion: @escaping (Result<Teams, ResponseError>) -> Void) {
+    func getTeams(completion: @escaping (Result<Teams, Error>) -> Void) {
         var request = URLRequest(url: URL(string: "\(APIConstants.baseUrl)teams/")!)
         request.addValue(requeredHeader.values.first!, forHTTPHeaderField: requeredHeader.keys.first!)
 
-        makeDataTask(with: request, type: Teams.self) { result in
+        APICaller.makeDataTask(with: request, type: Teams.self) { response in
+            let result = APIResponseHandler.handleResponse(with: Teams.self, networkResponse: response)
             completion(result)
         }
     }
 
-    func getMatches(id: Int,completion: @escaping (Result<Matches, ResponseError>) -> Void) {
+    func getMatches(id: Int,completion: @escaping (Result<Matches, Error>) -> Void) {
         var request = URLRequest(url: URL(string: "\(APIConstants.baseUrl)teams/\(id)/matches")!)
         request.addValue(requeredHeader.values.first!, forHTTPHeaderField: requeredHeader.keys.first!)
 
-        makeDataTask(with: request, type: Matches.self) { result in
-            completion(result)
-        }
-    }
-
-    private func makeDataTask<T: Decodable>(with request: URLRequest, type: T.Type, completion: @escaping (Result<T, ResponseError>) -> Void) {
-        URLSession.shared.dataTask(with: request) { data, response, error in
-            let result = self.handleRequest(with: T.self, data: data, response: response, error: error)
-            completion(result)
-        }.resume()
-    }
-
-    private func handleRequest<T: Decodable>(with type: T.Type, data: Data?, response: URLResponse?, error: Error?) ->Result<T, ResponseError> {
-        guard error == nil else {
-            return .failure(.error)
-        }
-        guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
-            return .failure(.responseStatusError)
-        }
-        guard let data = data else {
-            return .failure(.noData)
-        }
-        do {
-            let jsonData = try JSONDecoder().decode(T.self, from: data)
-            return .success(jsonData)
-        } catch {
-            return .failure(.decodingError)
+        APICaller.makeDataTask(with: request, type: Matches.self) { response in
+        let result = APIResponseHandler.handleResponse(with: Matches.self, networkResponse: response)
+        completion(result)
         }
     }
 }

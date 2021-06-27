@@ -7,14 +7,7 @@
 
 import Foundation
 
-enum ResponseError: String, Error {
-    case noData
-    case decodingError
-    case error
-    case responseStatusError
-}
-
 protocol DataProvider {
-    func getTeams(completion: @escaping (Result<Teams, ResponseError>) -> Void)
-    func getMatches(id: Int,completion: @escaping (Result<Matches, ResponseError>) -> Void)
+    func getTeams(completion: @escaping (Result<Teams, Error>) -> Void)
+    func getMatches(id: Int,completion: @escaping (Result<Matches, Error>) -> Void)
 }

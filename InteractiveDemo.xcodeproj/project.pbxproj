@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3618FD3226883BFD00BC2053 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3618FD3126883BFD00BC2053 /* APICaller.swift */; };
+		3618FD3A26883E2C00BC2053 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3618FD3926883E2C00BC2053 /* APIResponse.swift */; };
+		3618FD53268847B600BC2053 /* ResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3618FD52268847B600BC2053 /* ResponseError.swift */; };
 		4333F12D2685162F007DD015 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4333F12C2685162F007DD015 /* AppDelegate.swift */; };
 		4333F12F2685162F007DD015 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4333F12E2685162F007DD015 /* SceneDelegate.swift */; };
 		4333F1312685162F007DD015 /* TeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4333F1302685162F007DD015 /* TeamsViewController.swift */; };
@@ -52,6 +55,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3618FD3126883BFD00BC2053 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
+		3618FD3926883E2C00BC2053 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
+		3618FD52268847B600BC2053 /* ResponseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseError.swift; sourceTree = "<group>"; };
 		4333F1292685162F007DD015 /* InteractiveDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InteractiveDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4333F12C2685162F007DD015 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4333F12E2685162F007DD015 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +116,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3618FD2F26883BE300BC2053 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				3618FD422688420400BC2053 /* Request */,
+				3618FD462688421500BC2053 /* Response */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		3618FD422688420400BC2053 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				3618FD3126883BFD00BC2053 /* APICaller.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		3618FD462688421500BC2053 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				3618FD3926883E2C00BC2053 /* APIResponse.swift */,
+				3618FD52268847B600BC2053 /* ResponseError.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
 		4333F1202685162F007DD015 = {
 			isa = PBXGroup;
 			children = (
@@ -133,13 +165,14 @@
 		4333F12B2685162F007DD015 /* InteractiveDemo */ = {
 			isa = PBXGroup;
 			children = (
-				438F459226878BE400371E35 /* Coordinator */,
+				3618FD2F26883BE300BC2053 /* Network */,
 				4333F16E2686124C007DD015 /* DataProvider */,
-				4333F16B26860BA0007DD015 /* Assets */,
 				4333F16326860924007DD015 /* SupportingFiles */,
+				438F459226878BE400371E35 /* Coordinator */,
 				4333F16226860916007DD015 /* Model */,
 				4333F161268608F9007DD015 /* TeamTableComponent */,
 				4333F160268608DF007DD015 /* DetailComponent */,
+				4333F16B26860BA0007DD015 /* Assets */,
 				4333F13726851630007DD015 /* LaunchScreen.storyboard */,
 				4333F13A26851630007DD015 /* Info.plist */,
 			);
@@ -411,8 +444,11 @@
 				438F45742687425700371E35 /* UpcomingMatchesCell.swift in Sources */,
 				4333F1702686126C007DD015 /* DataProvider.swift in Sources */,
 				4333F12F2685162F007DD015 /* SceneDelegate.swift in Sources */,
+				3618FD3226883BFD00BC2053 /* APICaller.swift in Sources */,
+				3618FD53268847B600BC2053 /* ResponseError.swift in Sources */,
 				4333F15D26851E6F007DD015 /* Team.swift in Sources */,
 				438F458D26877A6F00371E35 /* Matches.swift in Sources */,
+				3618FD3A26883E2C00BC2053 /* APIResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,7 +546,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -565,7 +601,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -581,6 +617,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M3C8BZ4H8Y;
 				INFOPLIST_FILE = InteractiveDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -599,6 +636,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M3C8BZ4H8Y;
 				INFOPLIST_FILE = InteractiveDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
