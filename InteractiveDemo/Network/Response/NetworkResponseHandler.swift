@@ -1,15 +1,13 @@
 //
-//  ResponseError.swift
-//  InteractiveDemo
+//  NetworkManager.swift
+//  Coupons
 //
-//  Created by Tal Spektor on 27/06/2021.
+//  Created by Tal talspektor on 25/01/2021.
 //
 
 import Foundation
 
-import Foundation
-
-enum NetworkResponseStatus: Error {
+enum NetworkHTTPResponse: Error {
     case success
     case authenticationError
     case badRequest
@@ -41,20 +39,20 @@ enum NetworkResponseStatus: Error {
     }
 }
 
-enum NetworkResponseHandler {
+struct NetworkResponseHandler {
 
     enum Result<String> {
         case success(String)
         case failure(String)
     }
 
-    static func handleNetworkResponseStatus(_ response: HTTPURLResponse) -> Result<NetworkResponseStatus> {
+    static func handleNetworkResponse(_ response: HTTPURLResponse) -> Result<NetworkHTTPResponse> {
         switch response.statusCode {
-        case 200...299: return .success(NetworkResponseStatus.success)
-        case 401...500: return .failure(NetworkResponseStatus.authenticationError)
-        case 501...599: return .success(NetworkResponseStatus.badRequest)
-        case 600: return .failure(NetworkResponseStatus.outdated)
-        default: return .failure(NetworkResponseStatus.failed)
+        case 200...299: return .success(NetworkHTTPResponse.success)
+        case 401...500: return .failure(NetworkHTTPResponse.authenticationError)
+        case 501...599: return .success(NetworkHTTPResponse.badRequest)
+        case 600: return .failure(NetworkHTTPResponse.outdated)
+        default: return .failure(NetworkHTTPResponse.failed)
         }
     }
 }

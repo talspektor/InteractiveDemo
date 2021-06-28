@@ -8,9 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		3618FD3226883BFD00BC2053 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3618FD3126883BFD00BC2053 /* APICaller.swift */; };
-		3618FD3A26883E2C00BC2053 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3618FD3926883E2C00BC2053 /* APIResponse.swift */; };
-		3618FD53268847B600BC2053 /* ResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3618FD52268847B600BC2053 /* ResponseError.swift */; };
-		3618FD5B268993C200BC2053 /* ResponseErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3618FD5A268993C200BC2053 /* ResponseErrorModel.swift */; };
+		3618FD652689EDAA00BC2053 /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3618FD602689EDAA00BC2053 /* ParameterEncoder.swift */; };
+		3618FD662689EDAA00BC2053 /* JSONEncoder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3618FD612689EDAA00BC2053 /* JSONEncoder+Extension.swift */; };
+		3618FD672689EDAA00BC2053 /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3618FD622689EDAA00BC2053 /* URLParameterEncoder.swift */; };
+		3618FD682689EDAA00BC2053 /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3618FD632689EDAA00BC2053 /* JSONParameterEncoder.swift */; };
+		3618FD692689EDAA00BC2053 /* EncodingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3618FD642689EDAA00BC2053 /* EncodingError.swift */; };
+		3618FD722689EE6100BC2053 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3618FD712689EE6100BC2053 /* EndPoint.swift */; };
+		3618FD792689EED300BC2053 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3618FD772689EED300BC2053 /* NetworkRouter.swift */; };
+		3618FD7A2689EED300BC2053 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3618FD782689EED300BC2053 /* Router.swift */; };
+		3618FD8C2689F39200BC2053 /* TeamsEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3618FD8B2689F39200BC2053 /* TeamsEndPoint.swift */; };
+		3618FD9B2689F70300BC2053 /* TeamsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3618FD9A2689F70300BC2053 /* TeamsClient.swift */; };
+		3618FDA42689F7C200BC2053 /* TeamService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3618FDA32689F7C200BC2053 /* TeamService.swift */; };
+		3618FDBD2689FB2000BC2053 /* ResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3618FDBA2689FB2000BC2053 /* ResponseHandler.swift */; };
+		3618FDBE2689FB2000BC2053 /* NetworkResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3618FDBB2689FB2000BC2053 /* NetworkResponseHandler.swift */; };
+		3618FDBF2689FB2000BC2053 /* ResponseErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3618FDBC2689FB2000BC2053 /* ResponseErrorModel.swift */; };
 		4333F12D2685162F007DD015 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4333F12C2685162F007DD015 /* AppDelegate.swift */; };
 		4333F12F2685162F007DD015 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4333F12E2685162F007DD015 /* SceneDelegate.swift */; };
 		4333F1312685162F007DD015 /* TeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4333F1302685162F007DD015 /* TeamsViewController.swift */; };
@@ -57,9 +68,20 @@
 
 /* Begin PBXFileReference section */
 		3618FD3126883BFD00BC2053 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
-		3618FD3926883E2C00BC2053 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
-		3618FD52268847B600BC2053 /* ResponseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseError.swift; sourceTree = "<group>"; };
-		3618FD5A268993C200BC2053 /* ResponseErrorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseErrorModel.swift; sourceTree = "<group>"; };
+		3618FD602689EDAA00BC2053 /* ParameterEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterEncoder.swift; sourceTree = "<group>"; };
+		3618FD612689EDAA00BC2053 /* JSONEncoder+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSONEncoder+Extension.swift"; sourceTree = "<group>"; };
+		3618FD622689EDAA00BC2053 /* URLParameterEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
+		3618FD632689EDAA00BC2053 /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
+		3618FD642689EDAA00BC2053 /* EncodingError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncodingError.swift; sourceTree = "<group>"; };
+		3618FD712689EE6100BC2053 /* EndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
+		3618FD772689EED300BC2053 /* NetworkRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
+		3618FD782689EED300BC2053 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		3618FD8B2689F39200BC2053 /* TeamsEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsEndPoint.swift; sourceTree = "<group>"; };
+		3618FD9A2689F70300BC2053 /* TeamsClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsClient.swift; sourceTree = "<group>"; };
+		3618FDA32689F7C200BC2053 /* TeamService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamService.swift; sourceTree = "<group>"; };
+		3618FDBA2689FB2000BC2053 /* ResponseHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseHandler.swift; sourceTree = "<group>"; };
+		3618FDBB2689FB2000BC2053 /* NetworkResponseHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkResponseHandler.swift; sourceTree = "<group>"; };
+		3618FDBC2689FB2000BC2053 /* ResponseErrorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseErrorModel.swift; sourceTree = "<group>"; };
 		4333F1292685162F007DD015 /* InteractiveDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InteractiveDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4333F12C2685162F007DD015 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4333F12E2685162F007DD015 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +143,9 @@
 		3618FD2F26883BE300BC2053 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				3618FD762689EED300BC2053 /* Service */,
+				3618FD702689EE6100BC2053 /* EndPont */,
+				3618FD5F2689EDAA00BC2053 /* Encoding */,
 				3618FD422688420400BC2053 /* Request */,
 				3618FD462688421500BC2053 /* Response */,
 			);
@@ -138,11 +163,75 @@
 		3618FD462688421500BC2053 /* Response */ = {
 			isa = PBXGroup;
 			children = (
-				3618FD3926883E2C00BC2053 /* APIResponse.swift */,
-				3618FD52268847B600BC2053 /* ResponseError.swift */,
-				3618FD5A268993C200BC2053 /* ResponseErrorModel.swift */,
+				3618FDBB2689FB2000BC2053 /* NetworkResponseHandler.swift */,
+				3618FDBC2689FB2000BC2053 /* ResponseErrorModel.swift */,
+				3618FDBA2689FB2000BC2053 /* ResponseHandler.swift */,
 			);
 			path = Response;
+			sourceTree = "<group>";
+		};
+		3618FD5F2689EDAA00BC2053 /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				3618FD602689EDAA00BC2053 /* ParameterEncoder.swift */,
+				3618FD612689EDAA00BC2053 /* JSONEncoder+Extension.swift */,
+				3618FD622689EDAA00BC2053 /* URLParameterEncoder.swift */,
+				3618FD632689EDAA00BC2053 /* JSONParameterEncoder.swift */,
+				3618FD642689EDAA00BC2053 /* EncodingError.swift */,
+			);
+			path = Encoding;
+			sourceTree = "<group>";
+		};
+		3618FD702689EE6100BC2053 /* EndPont */ = {
+			isa = PBXGroup;
+			children = (
+				3618FD712689EE6100BC2053 /* EndPoint.swift */,
+			);
+			path = EndPont;
+			sourceTree = "<group>";
+		};
+		3618FD762689EED300BC2053 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				3618FD772689EED300BC2053 /* NetworkRouter.swift */,
+				3618FD782689EED300BC2053 /* Router.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		3618FD872689F36300BC2053 /* NetworkDataProvide */ = {
+			isa = PBXGroup;
+			children = (
+				438F457F2687539B00371E35 /* NetworkDataProvider.swift */,
+				3618FD962689F6EE00BC2053 /* EndPoint */,
+				3618FD9F2689F71700BC2053 /* Client */,
+				3618FDA82689F7C600BC2053 /* TeamService */,
+			);
+			path = NetworkDataProvide;
+			sourceTree = "<group>";
+		};
+		3618FD962689F6EE00BC2053 /* EndPoint */ = {
+			isa = PBXGroup;
+			children = (
+				3618FD8B2689F39200BC2053 /* TeamsEndPoint.swift */,
+			);
+			path = EndPoint;
+			sourceTree = "<group>";
+		};
+		3618FD9F2689F71700BC2053 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				3618FD9A2689F70300BC2053 /* TeamsClient.swift */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+		3618FDA82689F7C600BC2053 /* TeamService */ = {
+			isa = PBXGroup;
+			children = (
+				3618FDA32689F7C200BC2053 /* TeamService.swift */,
+			);
+			path = TeamService;
 			sourceTree = "<group>";
 		};
 		4333F1202685162F007DD015 = {
@@ -254,7 +343,7 @@
 			isa = PBXGroup;
 			children = (
 				4333F16F2686126C007DD015 /* DataProvider.swift */,
-				438F457F2687539B00371E35 /* NetworkDataProvider.swift */,
+				3618FD872689F36300BC2053 /* NetworkDataProvide */,
 			);
 			path = DataProvider;
 			sourceTree = "<group>";
@@ -433,26 +522,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3618FD722689EE6100BC2053 /* EndPoint.swift in Sources */,
 				4333F1652686097E007DD015 /* DataSource.swift in Sources */,
 				4333F15F268608B1007DD015 /* TeamDetailView.swift in Sources */,
 				438F459426878C1900371E35 /* Coordinator.swift in Sources */,
+				3618FDA42689F7C200BC2053 /* TeamService.swift in Sources */,
+				3618FD672689EDAA00BC2053 /* URLParameterEncoder.swift in Sources */,
+				3618FDBE2689FB2000BC2053 /* NetworkResponseHandler.swift in Sources */,
 				4333F1312685162F007DD015 /* TeamsViewController.swift in Sources */,
 				4333F16726860A16007DD015 /* TeamCell.swift in Sources */,
 				438F4586268770F400371E35 /* TeamDetailViewController.swift in Sources */,
+				3618FD652689EDAA00BC2053 /* ParameterEncoder.swift in Sources */,
+				3618FDBD2689FB2000BC2053 /* ResponseHandler.swift in Sources */,
+				3618FD682689EDAA00BC2053 /* JSONParameterEncoder.swift in Sources */,
 				4333F12D2685162F007DD015 /* AppDelegate.swift in Sources */,
+				3618FD8C2689F39200BC2053 /* TeamsEndPoint.swift in Sources */,
 				438F459026878AC300371E35 /* TeamDetailViewModel.swift in Sources */,
 				438F45802687539B00371E35 /* NetworkDataProvider.swift in Sources */,
-				3618FD5B268993C200BC2053 /* ResponseErrorModel.swift in Sources */,
 				438F459826878DED00371E35 /* MainCordinator.swift in Sources */,
 				4333F16D26860D99007DD015 /* TeamsViewModel.swift in Sources */,
 				438F45742687425700371E35 /* UpcomingMatchesCell.swift in Sources */,
 				4333F1702686126C007DD015 /* DataProvider.swift in Sources */,
 				4333F12F2685162F007DD015 /* SceneDelegate.swift in Sources */,
 				3618FD3226883BFD00BC2053 /* APICaller.swift in Sources */,
-				3618FD53268847B600BC2053 /* ResponseError.swift in Sources */,
+				3618FD692689EDAA00BC2053 /* EncodingError.swift in Sources */,
+				3618FD662689EDAA00BC2053 /* JSONEncoder+Extension.swift in Sources */,
 				4333F15D26851E6F007DD015 /* Team.swift in Sources */,
+				3618FDBF2689FB2000BC2053 /* ResponseErrorModel.swift in Sources */,
+				3618FD7A2689EED300BC2053 /* Router.swift in Sources */,
+				3618FD9B2689F70300BC2053 /* TeamsClient.swift in Sources */,
 				438F458D26877A6F00371E35 /* Matches.swift in Sources */,
-				3618FD3A26883E2C00BC2053 /* APIResponse.swift in Sources */,
+				3618FD792689EED300BC2053 /* NetworkRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
