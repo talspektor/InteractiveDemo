@@ -13,6 +13,8 @@ protocol EndPointType {
     var httpMethod: HTTPMethod { get }
     var task: HTTPTask { get }
     var headers: HTTPHeaders? { get }
+    var body: Parameters? { get }
+    var queryParams: QueryParams? { get }
 }
 
 enum HTTPMethod: String {

@@ -40,15 +40,21 @@ enum TeamsEndPoint: EndPointType {
     var task: HTTPTask {
         switch self {
         case .getTeams:
-            return .requestParametersAnyHeaders(bodyParameters: nil, urlParanatars: nil, additionalHeaders: headers)
+            return .requestParametersAnyHeaders(bodyParameters: body, urlParanatars: queryParams, additionalHeaders: headers)
         case .getUpcomingMatches:
             return .request
         }
     }
     
+    var body: Parameters? {
+        return nil
+    }
+    
+    var queryParams: QueryParams? {
+        return nil
+    }
+    
     var headers: HTTPHeaders? {
         ["X-Auth-Token": "df1100b013fa4295aa4a28a38fd24872"]
     }
-    
-    
 }
