@@ -60,5 +60,5 @@ enum NetworkResponseHandler {
 }
 
 enum HTTPError: Error {
-    case httpError
+    case httpError(ResponseErrorModel)
 }

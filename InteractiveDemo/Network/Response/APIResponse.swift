@@ -27,22 +27,32 @@ struct APIResponseHandler {
         let responseStatus = NetworkResponseHandler.handleNetworkResponseStatus(httpResponse)
         switch responseStatus {
         case .success:
-            let result = parseData(type: T.self, data: networkResponse.data)
-            return result
+            do {
+                let result = try parseData(type: T.self, data: networkResponse.data)
+                return .success(result)
+            } catch {
+                return .failure(error)
+            }
         case .failure(let error):
-            return .failure(error)
+            debugPrint(error)
+            do {
+                let responseError = try parseData(type: ResponseErrorModel.self, data: networkResponse.data)
+                return .failure(HTTPError.httpError(responseError))
+            } catch {
+                return .failure(error)
+            }
         }
     }
     
-    private static func parseData<T: Decodable>(type: T.Type, data: Data?) -> Result<T, Error> {
+    private static func parseData<T: Decodable>(type: T.Type, data: Data?) throws -> T {
         guard let data = data else {
-            return .failure(ResponseError.noData)
+            throw ResponseError.noData
         }
         do {
             let jsonData = try JSONDecoder().decode(T.self, from: data)
-            return .success(jsonData)
+            return jsonData
         } catch {
-            return .failure(ResponseError.decodingError)
+            throw ResponseError.decodingError
         }
     }
 }

@@ -10,6 +10,7 @@
 		3618FD3226883BFD00BC2053 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3618FD3126883BFD00BC2053 /* APICaller.swift */; };
 		3618FD3A26883E2C00BC2053 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3618FD3926883E2C00BC2053 /* APIResponse.swift */; };
 		3618FD53268847B600BC2053 /* ResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3618FD52268847B600BC2053 /* ResponseError.swift */; };
+		3618FD5B268993C200BC2053 /* ResponseErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3618FD5A268993C200BC2053 /* ResponseErrorModel.swift */; };
 		4333F12D2685162F007DD015 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4333F12C2685162F007DD015 /* AppDelegate.swift */; };
 		4333F12F2685162F007DD015 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4333F12E2685162F007DD015 /* SceneDelegate.swift */; };
 		4333F1312685162F007DD015 /* TeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4333F1302685162F007DD015 /* TeamsViewController.swift */; };
@@ -58,6 +59,7 @@
 		3618FD3126883BFD00BC2053 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		3618FD3926883E2C00BC2053 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
 		3618FD52268847B600BC2053 /* ResponseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseError.swift; sourceTree = "<group>"; };
+		3618FD5A268993C200BC2053 /* ResponseErrorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseErrorModel.swift; sourceTree = "<group>"; };
 		4333F1292685162F007DD015 /* InteractiveDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InteractiveDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4333F12C2685162F007DD015 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4333F12E2685162F007DD015 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 			children = (
 				3618FD3926883E2C00BC2053 /* APIResponse.swift */,
 				3618FD52268847B600BC2053 /* ResponseError.swift */,
+				3618FD5A268993C200BC2053 /* ResponseErrorModel.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -439,6 +442,7 @@
 				4333F12D2685162F007DD015 /* AppDelegate.swift in Sources */,
 				438F459026878AC300371E35 /* TeamDetailViewModel.swift in Sources */,
 				438F45802687539B00371E35 /* NetworkDataProvider.swift in Sources */,
+				3618FD5B268993C200BC2053 /* ResponseErrorModel.swift in Sources */,
 				438F459826878DED00371E35 /* MainCordinator.swift in Sources */,
 				4333F16D26860D99007DD015 /* TeamsViewModel.swift in Sources */,
 				438F45742687425700371E35 /* UpcomingMatchesCell.swift in Sources */,
